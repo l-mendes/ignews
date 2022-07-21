@@ -22,8 +22,6 @@ export default function Post({post}: PostProps) {
   const { data: session } = useSession();
   const router = useRouter();
 
-  console.log(session);
-
   useEffect(() => {
     if (session?.activeSubscription) {
       router.push(`/posts/${post.slug}`);
